@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+:root{  --color1: #DBE0D1;
+        --color2: #082323;
+        --color3:#32333B;
+        --color4: #32323A;
+        --color5: #00140D;
+        --color6: #D38D00;
+        --paraquesevea: black;
+        --fuente1: 'Elianto'
+        font-size: 20px
+ }
+
+ 
+body::-webkit-scrollbar {
+    width: 15px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--color2);        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color6); /* color of the scroll thumb */
+    border-radius: 15px;       /* roundness of the scroll thumb */
+
+  }
+
+
+  .contenedor{
+    /*max-width: 120rem;*/
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5 fr;
+    grid-auto-rows: repeat(6, 1fr);
+    grid-template-areas:
+     "header     header      header" 
+     "main       main        main"
+     "main       main        main"
+     "footer      footer     footer";
+     background-color: var(--color3);
+
+  }
+  
+  
+
+  .contenedor .header { 
+    grid-area: header;
+    width: 100%;
+    justify-content: space-between; 
+    display:grid;
+    box-sizing: border-box;
+    grid-template-columns: 50% 50%;
+    /*background-image: url(../img/cielo.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size:contain;*/
+    background-color:var(--color2);
+    color:  var(--color1);
+    align-items: center;
+    font-family: 'Tw Cen MT Condensed';
+    padding-left: 5%;
+
+    
+    }
+
+
+.nombre{
+    font-size: 5rem ;
+    padding-left: 1.5rem ;
+
+}
+
+
+.contenedor .nav {
+    display: flex;
+    /*background-image: url(../img/cielo.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size:contain; */
+    background-color:var(--color2);
+    height: 20vh ;
+    color: var(--color1);
+    justify-content: end;
+    padding: 2% 15% 3% 5%; 
+    font-size: 1.8rem;
+
+}
+
+
+
+#links> a {
+
+    font-family: 'Tw Cen MT Condensed';
+    text-decoration: none;
+    padding:  0.5rem 1rem;
+    color:var(--color1)
+
+}
+
+
+#links{
+    display: flex;
+    height: fit-content;
+}
+
+
+.main{
+grid-area: main;
+    background-color: var(--color3);
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor .footer {
+    display: grid;
+    grid-area: footer;
+    background-color: var(--color2) ;
+    height: 20vh;
+    color:  var(--color1);
+    justify-content:  center;
+    padding: 1rem;
+}
+
+
+#icon{
+
+    display: flex;
+    justify-content: space-between;
+
+}
